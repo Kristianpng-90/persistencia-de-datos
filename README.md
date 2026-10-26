@@ -271,7 +271,7 @@ Los archivos de entrada usados para reproducir las sesiones están en `docs/evid
 
 ## Documento técnico y video
 
-- Documento técnico (Word): [`docs/documento-tecnico/Documento_Tecnico_Persistencia_Datos_Java.docx`](docs/documento-tecnico/Documento_Tecnico_Persistencia_Datos_Java.docx)
+
 - Documento técnico (PDF): [`docs/documento-tecnico/Documento_Tecnico_Persistencia_Datos_Java.pdf`](docs/documento-tecnico/Documento_Tecnico_Persistencia_Datos_Java.pdf)
 - Guion del video (inglés): [`docs/guion-video/guion-video-en.md`](docs/guion-video/guion-video-en.md)
 - Video explicativo en YouTube: **[PEGAR AQUÍ EL ENLACE DEL VIDEO]**
@@ -282,5 +282,5 @@ Los archivos de entrada usados para reproducir las sesiones están en `docs/evid
 - **Programa:** Ingeniería de Software
 - **Asignatura:** Taller de Programación
 - **Institución:** Universidad Manuela Beltrán
-- **Docente:** [NOMBRE DEL DOCENTE]
+- **Docente:** Juan Jose Osorio Tabares
 - **Año:** 2026
