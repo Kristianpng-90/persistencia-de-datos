@@ -1,0 +1,126 @@
+# Video Script: Student Management, Data Persistence in Java with JDBC and SQLite
+
+- **Author:** Cristian Camilo Girata Ravelo
+- **Course:** Taller de Programación, Software Engineering, Universidad Manuela Beltrán
+- **Language:** English
+- **Target length:** 7 to 8 minutes
+- **Recording tip:** Record the screen at 1920 × 1080, enlarge the terminal font to at least 16 pt, and keep this script on a second screen or printed.
+
+## Before Recording
+
+1. Delete the `data/` folder so the demonstration starts with an empty database.
+2. Run `mvn clean package` once, so the build output is ready.
+3. Open the project in your IDE with these files in tabs: `pom.xml`, `schema.sql`, `ConexionBD.java`, `EstudianteDAO.java`, `EstudianteDAOImpl.java`, `EstudianteService.java`.
+4. Open a terminal in the project root folder.
+5. Optional: install DB Browser for SQLite to show the database file in Part 7.
+
+---
+
+## Part 1: Introduction (0:00 to 0:40)
+
+**On screen:** GitHub repository main page with the README visible.
+
+**Narration:**
+
+> Hello, my name is Cristian Camilo Girata Ravelo, and I am a Software Engineering student at Universidad Manuela Beltrán. In this video I will present my project for the Data Persistence practice in Java.
+>
+> The project is a console application that manages students. It can create, read, update, and delete student records, and it stores them in a SQLite database using JDBC. This means the data is still there after the program is closed and opened again.
+
+## Part 2: Technologies and Project Structure (0:40 to 1:40)
+
+**On screen:** Expand the folder tree in the IDE, then open `pom.xml`.
+
+**Narration:**
+
+> The project uses Java 17, Maven to manage the build and the dependencies, SQLite as an embedded database, and the sqlite-jdbc driver. I also used JUnit 5 for automated tests.
+>
+> The code follows Maven's standard directory layout. The source code is in `src/main/java`, the SQL script is in `src/main/resources`, and the tests are in `src/test/java`.
+>
+> In `pom.xml` you can see the two dependencies: the SQLite JDBC driver and JUnit. The Shade plugin builds a single executable JAR file that already includes the driver.
+
+## Part 3: Architecture and the DAO Pattern (1:40 to 2:40)
+
+**On screen:** Show the package names, then open `EstudianteDAO.java`.
+
+**Narration:**
+
+> The application is organized in layers. The `presentacion` package contains the console menu. The `servicio` package contains the business rules and validations. The `dao` package contains the data access code, and the `conexion` package manages the JDBC connection. The `modelo` package has the `Estudiante` entity.
+>
+> I applied the Data Access Object pattern. `EstudianteDAO` is an interface that defines the operations: insert, find by ID, find by document, list all, update, delete, and count. The rest of the application depends on this interface, not on SQL or SQLite directly. If I changed the database in the future, I would only need a new implementation of this interface.
+
+## Part 4: Database Initialization and JDBC Connection (2:40 to 3:30)
+
+**On screen:** Open `schema.sql`, then `ConexionBD.java`.
+
+**Narration:**
+
+> This is the database schema. The `estudiantes` table has an auto-increment primary key, and the document and email columns are unique. The semester must be between 1 and 10.
+>
+> The `ConexionBD` class builds the JDBC URL `jdbc:sqlite:data/estudiantes.db` and opens connections with `DriverManager`. When the application starts, the method `inicializarEsquema` creates the `data` folder and runs the script. Because the script uses `CREATE TABLE IF NOT EXISTS`, it never deletes existing data.
+
+## Part 5: CRUD with PreparedStatement (3:30 to 4:30)
+
+**On screen:** Open `EstudianteDAOImpl.java`. Highlight the SQL constants, then the `insertar` method.
+
+**Narration:**
+
+> `EstudianteDAOImpl` implements the CRUD operations with JDBC. Every query uses a `PreparedStatement` with question-mark parameters. The values typed by the user are never concatenated into the SQL text, so they are always treated as data. This prevents SQL injection.
+>
+> In the `insertar` method, I set the six parameters, execute the update, and read the generated ID. All connections and statements are closed automatically with try-with-resources.
+>
+> When SQLite reports an error, the `traducir` method converts the `SQLException` into the application's own exceptions. For example, a duplicate document becomes a `DatoDuplicadoException` with a clear message.
+
+## Part 6: Live Demonstration (4:30 to 6:30)
+
+**On screen:** Terminal. Run:
+
+```bash
+java -jar target/gestion-estudiantes-1.0.0.jar
+```
+
+**Actions and narration:**
+
+1. **Create.** Choose option 1 and register *Laura Valentina Gómez Rojas*, document `1012345678`, email `laura.gomez@correo.com`, program *Ingeniería de Software*, semester 3. Register a second student.
+   > I will register two students. The application confirms each record and shows the ID generated by the database.
+2. **Read.** Choose option 2, then option 3 with ID 1, then option 4 with a document number.
+   > Now I list all students, and I search by ID and by document number.
+3. **Update.** Choose option 5, ID 1, press Enter to keep the current values, and change the semester to 4.
+   > To update, I can leave a field empty to keep its current value. I will only change the semester.
+4. **Validations.** Choose option 1 and try the same document `1012345678`. Then try the email `correo-invalido`, and then semester 12.
+   > The application validates the data. A duplicate document, an invalid email, or a semester outside the range are rejected with a clear message, and the program keeps running.
+5. **Delete.** Choose option 6, enter the ID of the second student, and confirm with `S`.
+   > To delete, the application shows the student's name and asks for confirmation.
+6. Choose option 0 to exit.
+
+## Part 7: Proving Persistence (6:30 to 7:15)
+
+**On screen:** Show the `data/estudiantes.db` file in the file explorer. Run the application again and choose option 2. Optionally, open the file in DB Browser for SQLite and run `SELECT * FROM estudiantes;`.
+
+**Narration:**
+
+> The application is closed, and here is the database file. I will start the program again. As you can see, the menu shows the number of registered students, and the list contains the same data, including the update I made. The information was saved permanently in the SQLite file.
+
+## Part 8: Automated Tests (7:15 to 7:40)
+
+**On screen:** Run `mvn test` and show the summary.
+
+**Narration:**
+
+> I also wrote sixteen JUnit tests. They check each CRUD operation, the duplicate rules, an SQL injection attempt, the validations, and the persistence of data when a new connection is opened. All tests use a temporary database file.
+
+## Part 9: Conclusion (7:40 to 8:00)
+
+**On screen:** GitHub repository with the `docs` folder open.
+
+**Narration:**
+
+> To conclude, this project shows how JDBC, prepared statements, and the DAO pattern make it possible to build a Java application with safe and well-organized data persistence. The source code, the technical document, and the evidence are available in this GitHub repository. Thank you for watching.
+
+---
+
+## Publishing the Video on YouTube
+
+1. Go to YouTube Studio and select **Create → Upload videos**.
+2. Title: *Data Persistence in Java with JDBC and SQLite – Cristian Girata (UMB)*.
+3. Visibility: **Unlisted** (anyone with the link can watch it) or **Public**, as the teacher requires.
+4. Copy the link and paste it in `README.md`, `docs/enlaces.md`, and the technical document.

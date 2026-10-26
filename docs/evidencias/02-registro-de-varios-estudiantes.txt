@@ -1,0 +1,18 @@
+Seleccione una opcion: 1
+--- Registrar estudiante ---
+Documento: 1023456789
+Nombres: Andrés Felipe
+Apellidos: Martínez López
+Correo: ANDRES.MARTINEZ@correo.com
+Programa: Ingeniería de Software
+Semestre (1-10): 5
+[OK] Estudiante registrado con ID 2.
+Seleccione una opcion: 1
+--- Registrar estudiante ---
+Documento: 1034567890
+Nombres: María José
+Apellidos: Castro Díaz
+Correo: maria.castro@correo.com
+Programa: Ingeniería Industrial
+Semestre (1-10): 2
+[OK] Estudiante registrado con ID 3.

@@ -1,0 +1,20 @@
+$ ejecucion de las clases de prueba JUnit (EstudianteDAOImplTest, EstudianteServiceTest)
+== EstudianteDAOImplTest
+  [OK]    Actualizar: los cambios quedan guardados
+  [OK]    Leer: buscar un id inexistente devuelve Optional vacio
+  [OK]    Leer: buscar por id y por documento devuelve el registro guardado
+  [OK]    Restriccion UNIQUE: correo duplicado lanza DatoDuplicadoException
+  [OK]    Restriccion UNIQUE: documento duplicado lanza DatoDuplicadoException
+  [OK]    Eliminar: el registro deja de existir
+  [OK]    Crear: insertar asigna un id generado por la base de datos
+  [OK]    Inyeccion SQL: el texto malicioso se trata como dato, no como SQL
+  [OK]    Leer: listar devuelve todos los registros ordenados por apellidos
+  [OK]    Persistencia: los datos siguen disponibles al abrir una nueva conexion
+== EstudianteServiceTest
+  [OK]    Correo sin arroba es rechazado
+  [OK]    Documento con letras es rechazado
+  [OK]    Un id negativo es rechazado antes de consultar la base de datos
+  [OK]    Nombres vacios son rechazados
+  [OK]    Un estudiante valido se registra y el correo se normaliza a minusculas
+  [OK]    Semestre fuera del rango 1-10 es rechazado
+Pruebas ejecutadas: 16, exitosas: 16, fallidas: 0

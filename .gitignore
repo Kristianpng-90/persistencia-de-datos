@@ -1,0 +1,63 @@
+# ===========================================================
+# .gitignore - Proyecto Java + Maven + SQLite
+# ===========================================================
+
+# --- Compilados y empaquetados de Maven (se regeneran con "mvn package") ---
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# --- Base de datos local generada al ejecutar la aplicacion ---
+# El archivo se crea automaticamente con src/main/resources/db/schema.sql
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# --- IntelliJ IDEA ---
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# --- Eclipse ---
+.classpath
+.project
+.settings/
+bin/
+
+# --- NetBeans ---
+nbproject/private/
+nbbuild/
+nbdist/
+nb-configuration.xml
+
+# --- Visual Studio Code ---
+.vscode/
+
+# --- Registros y temporales ---
+*.log
+*.tmp
+*.bak
+*~
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Credenciales y configuracion sensible (nunca publicar) ---
+.env
+*.env
+*.pem
+*.key
+credenciales*.properties
+
+# --- Archivos temporales de Office (aparecen al abrir el informe en Word) ---
+~$*

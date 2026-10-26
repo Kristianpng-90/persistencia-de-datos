@@ -1,0 +1,61 @@
+1
+1012345678
+Laura Valentina
+Gómez Rojas
+laura.gomez@correo.com
+Ingeniería de Software
+3
+1
+1023456789
+Andrés Felipe
+Martínez López
+ANDRES.MARTINEZ@correo.com
+Ingeniería de Software
+5
+1
+1034567890
+María José
+Castro Díaz
+maria.castro@correo.com
+Ingeniería Industrial
+2
+2
+3
+2
+4
+1034567890
+5
+1
+
+
+
+
+Ingeniería de Sistemas
+4
+2
+1
+1012345678
+Pedro
+Ruiz
+pedro.ruiz@correo.com
+Ingeniería de Software
+1
+1
+1045678901
+Pedro
+Ruiz
+correo-invalido
+Ingeniería de Software
+1
+1
+1045678901
+Pedro
+Ruiz
+pedro.ruiz@correo.com
+Ingeniería de Software
+12
+3
+abc
+3
+99
+0

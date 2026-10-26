@@ -1,0 +1,21 @@
+$ java -Dapp.eco=true -jar target/gestion-estudiantes-1.0.0.jar < entradas/sesion1.txt
+Base de datos: <carpeta-del-proyecto>/data/estudiantes.db
+
+===== GESTION DE ESTUDIANTES (0 registrados) =====
+1. Registrar estudiante
+2. Listar estudiantes
+3. Buscar por ID
+4. Buscar por documento
+5. Actualizar estudiante
+6. Eliminar estudiante
+0. Salir
+Seleccione una opcion: 1
+--- Registrar estudiante ---
+Documento: 1012345678
+Nombres: Laura Valentina
+Apellidos: Gómez Rojas
+Correo: laura.gomez@correo.com
+Programa: Ingeniería de Software
+Semestre (1-10): 3
+[OK] Estudiante registrado con ID 1.
+

@@ -1,0 +1,5 @@
+$ python3 consulta_sqlite.py   # lectura directa del archivo data/estudiantes.db, sin usar la aplicacion
+Tablas: ['estudiantes']
+SELECT id, documento, nombres, apellidos, programa, semestre, fecha_registro FROM estudiantes;
+1 | 1012345678 | Laura Valentina | Gómez Rojas | Ingeniería de Sistemas | 4 | 2026-10-21 13:08:00
+2 | 1023456789 | Andrés Felipe | Martínez López | Ingeniería de Software | 5 | 2026-10-21 13:08:00

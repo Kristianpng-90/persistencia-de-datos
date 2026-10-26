@@ -1,0 +1,23 @@
+Seleccione una opcion: 2
+--------------------------------------------------------------------------------------------------------------
+ID   DOCUMENTO    NOMBRE COMPLETO              CORREO                         PROGRAMA                 SEM
+--------------------------------------------------------------------------------------------------------------
+3    1034567890   María José Castro Díaz       maria.castro@correo.com        Ingeniería Industrial      2
+1    1012345678   Laura Valentina Gómez Rojas  laura.gomez@correo.com         Ingeniería de Software     3
+2    1023456789   Andrés Felipe Martínez López andres.martinez@correo.com     Ingeniería de Software     5
+--------------------------------------------------------------------------------------------------------------
+Total: 3
+Seleccione una opcion: 3
+ID a buscar: 2
+--------------------------------------------------------------------------------------------------------------
+ID   DOCUMENTO    NOMBRE COMPLETO              CORREO                         PROGRAMA                 SEM
+--------------------------------------------------------------------------------------------------------------
+2    1023456789   Andrés Felipe Martínez López andres.martinez@correo.com     Ingeniería de Software     5
+Registrado el: 2026-10-21 13:08:00
+Seleccione una opcion: 4
+Documento a buscar: 1034567890
+--------------------------------------------------------------------------------------------------------------
+ID   DOCUMENTO    NOMBRE COMPLETO              CORREO                         PROGRAMA                 SEM
+--------------------------------------------------------------------------------------------------------------
+3    1034567890   María José Castro Díaz       maria.castro@correo.com        Ingeniería Industrial      2
+Registrado el: 2026-10-21 13:08:01

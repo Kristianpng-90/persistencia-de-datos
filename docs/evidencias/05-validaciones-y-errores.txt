@@ -1,0 +1,33 @@
+Seleccione una opcion: 1
+--- Registrar estudiante ---
+Documento: 1012345678
+Nombres: Pedro
+Apellidos: Ruiz
+Correo: pedro.ruiz@correo.com
+Programa: Ingeniería de Software
+Semestre (1-10): 1
+[Duplicado] Ya existe un estudiante con ese documento.
+Seleccione una opcion: 1
+--- Registrar estudiante ---
+Documento: 1045678901
+Nombres: Pedro
+Apellidos: Ruiz
+Correo: correo-invalido
+Programa: Ingeniería de Software
+Semestre (1-10): 1
+[Validacion] El correo electronico no tiene un formato valido.
+Seleccione una opcion: 1
+--- Registrar estudiante ---
+Documento: 1045678901
+Nombres: Pedro
+Apellidos: Ruiz
+Correo: pedro.ruiz@correo.com
+Programa: Ingeniería de Software
+Semestre (1-10): 12
+[Validacion] El semestre debe estar entre 1 y 10.
+Seleccione una opcion: 3
+ID a buscar: abc
+[Validacion] Debe ingresar un numero entero valido.
+Seleccione una opcion: 3
+ID a buscar: 99
+No existe un estudiante con ID 99.

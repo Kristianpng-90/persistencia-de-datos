@@ -1,0 +1,19 @@
+Seleccione una opcion: 5
+ID del estudiante a actualizar: 1
+Deje el campo vacio para conservar el valor actual.
+Documento [1012345678]: 
+Nombres [Laura Valentina]: 
+Apellidos [Gómez Rojas]: 
+Correo [laura.gomez@correo.com]: 
+Programa [Ingeniería de Software]: Ingeniería de Sistemas
+Semestre [3]: 4
+[OK] Estudiante con ID 1 actualizado.
+Seleccione una opcion: 2
+--------------------------------------------------------------------------------------------------------------
+ID   DOCUMENTO    NOMBRE COMPLETO              CORREO                         PROGRAMA                 SEM
+--------------------------------------------------------------------------------------------------------------
+3    1034567890   María José Castro Díaz       maria.castro@correo.com        Ingeniería Industrial      2
+1    1012345678   Laura Valentina Gómez Rojas  laura.gomez@correo.com         Ingeniería de Sistemas     4
+2    1023456789   Andrés Felipe Martínez López andres.martinez@correo.com     Ingeniería de Software     5
+--------------------------------------------------------------------------------------------------------------
+Total: 3
