@@ -101,7 +101,7 @@ taller-persistencia-datos-java/
 │       └── EstudianteServiceTest.java         Pruebas de las validaciones
 └── docs/
     ├── enlaces.md                             Enlaces al repositorio y al video
-    ├── documento-tecnico/                     Informe en Word y PDF (APA 7)
+    ├── Documento Tecnico/                     Documento técnico final en PDF
     ├── guion-video/                           Guion del video en inglés
     └── evidencias/                            Capturas y salidas reales de ejecución
 ```
@@ -271,8 +271,7 @@ Los archivos de entrada usados para reproducir las sesiones están en `docs/evid
 
 ## Documento técnico y video
 
-
-- Documento técnico (PDF): [`docs/documento-tecnico/Documento_Tecnico_Persistencia_Datos_Java.pdf`](docs/documento-tecnico/Documento_Tecnico_Persistencia_Datos_Java.pdf)
+- Documento técnico final (PDF): [`docs/Documento%20Tecnico/Documento%20Tecnico%20Persistencia%20Datos%20Java%20Final.pdf`](docs/Documento%20Tecnico/Documento%20Tecnico%20Persistencia%20Datos%20Java%20Final.pdf)
 - Guion del video (inglés): [`docs/guion-video/guion-video-en.md`](docs/guion-video/guion-video-en.md)
 - Video explicativo en YouTube: **[PEGAR AQUÍ EL ENLACE DEL VIDEO]**
 
